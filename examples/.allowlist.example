@@ -1,0 +1,7 @@
+# One filename stem per line, optional reason after whitespace.
+# Inverted default: project_* and reference_* pointers are demoted unless
+# their target contains one of these stems.
+
+project_bootstrap   keep - always-needed setup pointer
+reference_api_shape keep - prevents repeated API field mistakes
+durable_workflow    keep - active guard rail for every session

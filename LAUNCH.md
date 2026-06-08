@@ -2,6 +2,8 @@
 
 Draft copy for announcing `claude-clean-context`. Pick per channel; edit the hook from comments after the first post lands.
 
+**Topics / hashtags** (append to LinkedIn or X as fits): #ClaudeCode #Anthropic #ContextEngineering #LLM #AIagents #DeveloperTools #OpenSource — GitHub repo topics: `claude-code` · `context-management` · `llm-memory` · `ai-agents` · `anthropic` · `developer-tools`.
+
 ---
 
 ## 1. r/ClaudeAI

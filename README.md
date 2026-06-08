@@ -1,5 +1,7 @@
 # claude-clean-context
 
+[![ci](https://github.com/mohan-n-swamy/claude-clean-context/actions/workflows/ci.yml/badge.svg)](https://github.com/mohan-n-swamy/claude-clean-context/actions/workflows/ci.yml)
+
 Keep Claude Code's always-loaded context lean by demoting stale memory pointers and auditing skill descriptions.
 
 This repo gives Claude Code users a small, deterministic toolkit for cleaning the context that loads before every prompt. It focuses on the two movable layers that tend to grow over time: auto-memory indexes and skill descriptions.

@@ -1,0 +1,55 @@
+name: Bug report
+description: Something in the toolkit behaves incorrectly
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. **Do not paste real `MEMORY.md`, skill, or `.env` content
+        that contains private notes or secrets** — redact it or use a minimal fictional
+        example. For security vulnerabilities, do not file here: report privately per
+        [SECURITY.md](../blob/main/SECURITY.md).
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - memory-distill.py
+        - skills-report.py
+        - hooks (claim-verify-gate / memory-guardrail-check)
+        - retrieval-layer blueprint
+        - docs / IMPLEMENT.md
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What went wrong, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: >
+        Exact command(s) and the output. For the distiller, a dry-run is best
+        (`python3 memory-distill.py --mem-dir <dir>`) — paste a redacted/fictional fixture.
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version / commit
+      description: Release tag (e.g. v0.1.0) or `git rev-parse --short HEAD`.
+    validations:
+      required: false
+  - type: input
+    id: env
+    attributes:
+      label: OS + Python version
+      description: e.g. macOS 15 / Python 3.12
+    validations:
+      required: false

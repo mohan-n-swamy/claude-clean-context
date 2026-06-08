@@ -62,13 +62,13 @@ https://github.com/mohan-n-swamy/claude-clean-context
 
 I kept opening fresh Claude Code sessions and finding the context already half-spent — before I'd typed a thing.
 
-Claude Code loads standing context every session: your memory index, and every installed skill's description. Mine had quietly turned into a graveyard. Thirty-odd "here's where I left off" snapshots. Shipped-work status I'd never read again. Skill descriptions for skills this project never invokes. None of it garbage-collects. The default is to keep, and keep-by-default is exactly how a clean memory file becomes a status dump.
+Claude Code loads standing context every session: your memory index, and every installed skill's description. Mine had quietly turned into a graveyard. The line that made it click was a `session_2026-02` snapshot, "paused while fixing parser tests," from a project I'd shipped weeks earlier, still loading into every new session. Behind it, dozens more like it. Shipped-work status I'd never read again. Skill descriptions for skills this project never invokes. None of it garbage-collects. The default is to keep, and keep-by-default is exactly how a clean memory file becomes a status dump.
 
 The cost isn't just tokens. Stale status competes with the rules you actually want firing. A window full of old work makes the few live guard rails harder to find.
 
 So I built `claude-clean-context` — a small, deterministic toolkit to keep that context lean, and made it open source.
 
-The spine is six ideas: context management is the goal; memory management is the surface; distilling and verifying are the actions; a three-layer model (rails / retrieval / narrative) is the map; and mechanisms are why it holds instead of drifting back. One rule decides everything: a thing earns always-loaded context only if it must be present before you know you need it. Everything else loads on demand.
+One rule decides everything: a thing earns always-loaded context only if it must be present before you know you need it. Everything else loads on demand.
 
 It demotes stale memory (dry-run by default, never deletes), prices and prunes unused skills, and ships drop-in hooks — including one that blocks the agent from claiming "done" until it has actually run a verifying command. You can hand the repo to Claude and say "implement this for me."
 

@@ -40,7 +40,7 @@ github.com/mohan-n-swamy/claude-clean-context
 
 **Title:** Show HN: Keep Claude Code's always-loaded context lean
 
-Claude Code loads two things into context at the start of every session, before you type: your `MEMORY.md` index, and the name + description of every installed skill. Skill *bodies* lazy-load only when invoked — but the descriptions are always resident. Dozens of skills runs to thousands of tokens of standing cost, much of it for skills a given project never touches. Add accreting `MEMORY.md` snapshots on top, and a real fraction of every fresh session is spent before you've asked anything.
+Claude Code loads two things into context at the start of every session, before you type: your `MEMORY.md` index, and the name + description of every installed skill. Skill *bodies* lazy-load only when invoked — but the descriptions are always resident. A few dozen skills add up to thousands of tokens of standing cost, much of it for skills a given project never touches. Add accreting `MEMORY.md` snapshots on top, and a real fraction of every fresh session is spent before you've asked anything.
 
 `claude-clean-context` attacks both layers with one rule: a thing earns always-loaded context only if it must be present before you know you need it. Everything else loads on demand.
 

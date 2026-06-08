@@ -97,3 +97,19 @@ It demotes stale memory (dry-run by default, never deletes), prices and prunes u
 MIT, no dependencies.
 
 https://github.com/mohan-n-swamy/claude-clean-context
+
+---
+
+## 4c. LinkedIn — pinned first comment (post as the first comment, then pin)
+
+Plain text (LinkedIn comments don't render markdown):
+
+Repo here: https://github.com/mohan-n-swamy/claude-clean-context
+
+Fastest way to try it: clone it, hand it to Claude Code, and say "implement this for me" — it follows IMPLEMENT.md and sets up the whole thing (lean memory, the skills audit, the verify hooks). Or just run the distiller in dry-run first to see what it would demote — it never deletes, and the dry-run shows you exactly why each pointer goes.
+
+MIT. Curious what you find living in your MEMORY.md that shouldn't be there.
+
+**Tighter alt (one line):**
+
+https://github.com/mohan-n-swamy/claude-clean-context — clone it, hand it to Claude Code, say "implement this for me." Dry-run first; it never deletes. MIT.

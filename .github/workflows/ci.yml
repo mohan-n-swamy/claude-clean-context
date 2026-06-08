@@ -1,0 +1,28 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Compile Python scripts
+        run: python3 -m py_compile memory-distill.py skills-report.py
+
+      - name: Lint shell hooks + tests
+        run: |
+          for f in hooks/*.sh tests/*.sh; do
+            sh -n "$f"
+          done
+
+      - name: Distiller fixture + idempotency test
+        run: sh tests/fixture_test.sh

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="522" viewBox="0 0 920 522" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">
+  <style>
+    .fg{fill:#c9d1d9} .hdr{fill:#58a6ff;font-weight:600} .demote{fill:#f0883e;font-weight:700}
+    .reason{fill:#6e7681} .ok{fill:#7ee787;font-weight:600} .prompt{fill:#7ee787;font-weight:700}
+  </style>
+  <rect x="0" y="0" width="920" height="522" rx="10" fill="#0d1117" stroke="#30363d"/>
+  <rect x="0" y="0" width="920" height="38" rx="10" fill="#161b22"/>
+  <rect x="0" y="28" width="920" height="10" fill="#161b22"/>
+  <circle cx="20" cy="19" r="6" fill="#ff5f56"/>
+  <circle cx="40" cy="19" r="6" fill="#ffbd2e"/>
+  <circle cx="60" cy="19" r="6" fill="#27c93f"/>
+  <text x="460.0" y="23" text-anchor="middle" fill="#8b949e" font-size="12">memory-distill.py — dry-run</text>
+    <text x="22" y="56.0"><tspan class="prompt">$ </tspan><tspan class="fg">python3 memory-distill.py --mem-dir ~/.claude/projects/demo/memory</tspan></text>
+  <text x="22" y="84.7" class="hdr">~/.claude/projects/demo/memory: 15 -&gt; 6 pointers</text>
+  <text x="22" y="105.2"><tspan xml:space="preserve" class="demote">  DEMOTE:</tspan><tspan xml:space="preserve" class="fg"> - [Session 2026-02-14](session_2026-02-14.md) - paused while fixing parser tests</tspan></text>
+  <text x="22" y="125.7" xml:space="preserve" class="reason">          reason: session-resume snapshot (canonical = resume-state/STATUS.md)</text>
+  <text x="22" y="146.2"><tspan xml:space="preserve" class="demote">  DEMOTE:</tspan><tspan xml:space="preserve" class="fg"> - [Session resume import cleanup](project_session_resume_import_cleanup.md) - next step...</tspan></text>
+  <text x="22" y="166.7" xml:space="preserve" class="reason">          reason: session-resume snapshot (canonical = resume-state/STATUS.md)</text>
+  <text x="22" y="187.2"><tspan xml:space="preserve" class="demote">  DEMOTE:</tspan><tspan xml:space="preserve" class="fg"> - [Project checkout status](project_checkout_status.md) - checkout page is LIVE</tspan></text>
+  <text x="22" y="207.7" xml:space="preserve" class="reason">          reason: project/reference status -&gt; retrieval layer (not allowlisted)</text>
+  <text x="22" y="228.2"><tspan xml:space="preserve" class="demote">  DEMOTE:</tspan><tspan xml:space="preserve" class="fg"> - [Reference vendor notes](reference_vendor_notes.md) - temporary notes from old integr...</tspan></text>
+  <text x="22" y="248.7" xml:space="preserve" class="reason">          reason: project/reference status -&gt; retrieval layer (not allowlisted)</text>
+  <text x="22" y="269.2"><tspan xml:space="preserve" class="demote">  DEMOTE:</tspan><tspan xml:space="preserve" class="fg"> - [CLOSED migration](project_old_migration.md) - CLOSED after schema switch</tspan></text>
+  <text x="22" y="289.7" xml:space="preserve" class="reason">          reason: closed/resolved/done</text>
+  <text x="22" y="310.2"><tspan xml:space="preserve" class="demote">  DEMOTE:</tspan><tspan xml:space="preserve" class="fg"> - [Resolved cache issue](project_cache_issue.md) - (resolved) stale cache fixed</tspan></text>
+  <text x="22" y="330.7" xml:space="preserve" class="reason">          reason: closed/resolved/done</text>
+  <text x="22" y="351.2"><tspan xml:space="preserve" class="demote">  DEMOTE:</tspan><tspan xml:space="preserve" class="fg"> - [Done landing page](project_landing_page.md) - (done) copy shipped</tspan></text>
+  <text x="22" y="371.7" xml:space="preserve" class="reason">          reason: closed/resolved/done</text>
+  <text x="22" y="392.2"><tspan xml:space="preserve" class="demote">  DEMOTE:</tspan><tspan xml:space="preserve" class="fg"> - [Testing workflow](reference_testing_workflow.md) - generic test commands</tspan></text>
+  <text x="22" y="412.7" xml:space="preserve" class="reason">          reason: project/reference status -&gt; retrieval layer (not allowlisted)</text>
+  <text x="22" y="433.2"><tspan xml:space="preserve" class="demote">  DEMOTE:</tspan><tspan xml:space="preserve" class="fg"> - [Session 2026 status](project_session_resume_status.md) - what remained after the las...</tspan></text>
+  <text x="22" y="453.7" xml:space="preserve" class="reason">          reason: session-resume snapshot (canonical = resume-state/STATUS.md)</text>
+  <text x="22" y="484.4" class="ok">Summary: dry-run; demoted 9 pointer(s).</text>
+</svg>

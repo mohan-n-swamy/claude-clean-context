@@ -6,6 +6,10 @@ Keep Claude Code's always-loaded context lean by demoting stale memory pointers 
 
 This repo gives Claude Code users a small, deterministic toolkit for cleaning the context that loads before every prompt. It focuses on the two movable layers that tend to grow over time: auto-memory indexes and skill descriptions.
 
+![memory-distill.py dry-run: 15 pointers in, 6 out — session snapshots, closed work, and non-allowlisted status demoted, each with a reason](assets/demo.svg)
+
+*A real `memory-distill.py` dry-run on the bundled example: 15 pointers in, 6 out. Dry-run by default — it shows exactly why each pointer would be demoted and writes nothing.*
+
 ## The Problem
 
 Claude Code starts each session with standing context already loaded. Some of that context is useful: durable rules, corrections, and project-specific guard rails. Some of it quietly turns into stale status: old session snapshots, shipped work notes, and skills that are no longer relevant to the current project.

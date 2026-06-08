@@ -84,6 +84,14 @@ python3 skills-report.py --archive <skill-name>
 
 Archiving a global skill removes it from all projects. If a skill belongs to one project, move it into that project's `.claude/skills/` instead.
 
+## Best-practice layers
+
+- [hooks/](hooks/) - drop-in checks that enforce verification and memory guardrails.
+- [doctrine/](doctrine/) - adaptable instruction template for agent-assisted engineering.
+- [docs/memory-architecture.md](docs/memory-architecture.md) - the three-layer model for lean standing context, retrieval, and narrative docs.
+- [docs/retrieval-layer.md](docs/retrieval-layer.md) - generic self-hostable retrieval blueprint with citations.
+- [IMPLEMENT.md](IMPLEMENT.md) - copy-pasteable runbook for standing up the rig.
+
 ## Safety
 
 - Dry-run is the default.

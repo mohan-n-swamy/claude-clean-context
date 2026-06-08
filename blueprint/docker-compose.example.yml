@@ -1,0 +1,55 @@
+# Reference retrieval-layer compose.
+#
+# Fill in your own values in a private .env file. Bind services to localhost or
+# your private network; never expose unauthenticated database, embedding, or MCP
+# endpoints publicly. Images below are placeholders where noted.
+
+services:
+  db:
+    image: ${DB_IMAGE:-<postgres-with-vector-extension-image>}
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - retrieval_db:/var/lib/postgresql/data
+      - ./schema.sql:/docker-entrypoint-initdb.d/001-schema.sql:ro
+    networks:
+      - retrieval_private
+
+  embeddings:
+    image: ${EMBEDDINGS_IMAGE:-<standard-embeddings-api-image>}
+    restart: unless-stopped
+    environment:
+      EMBEDDING_MODEL: ${EMBEDDING_MODEL}
+      EMBEDDINGS_API_KEY: ${EMBEDDINGS_API_KEY:-}
+    volumes:
+      - retrieval_embeddings:/data
+    networks:
+      - retrieval_private
+    # Option A: run a local open embedding model behind /v1/embeddings.
+    # Option B: replace this service with a thin proxy to your hosted embeddings API.
+
+  mcp:
+    image: ${MCP_IMAGE:-<your-retrieval-mcp-server-image>}
+    restart: unless-stopped
+    environment:
+      DB_URL: ${DB_URL}
+      EMBEDDINGS_API: ${EMBEDDINGS_API}
+      EMBEDDING_MODEL: ${EMBEDDING_MODEL}
+      MCP_AUTH_TOKEN: ${MCP_AUTH_TOKEN}
+    depends_on:
+      - db
+      - embeddings
+    networks:
+      - retrieval_private
+    # Add a localhost/private-network port binding only after auth is configured.
+
+volumes:
+  retrieval_db:
+  retrieval_embeddings:
+
+networks:
+  retrieval_private:
+    driver: bridge
